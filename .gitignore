@@ -1,0 +1,22 @@
+# Keep your API key safe - NEVER upload this
+config.py
+
+# Python junk files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

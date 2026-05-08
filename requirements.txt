@@ -1,0 +1,10 @@
+mss==9.0.1
+pytesseract==0.3.10
+Pillow==10.2.0
+keyboard==0.13.5
+opencv-python==4.9.0.80
+numpy==1.26.3
+requests==2.31.0
+pyperclip==1.8.2
+customtkinter==5.2.1
+pystray==0.19.0
