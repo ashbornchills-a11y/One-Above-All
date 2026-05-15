@@ -1,5 +1,7 @@
 # Keep your API key safe - NEVER upload this
 config.py
+.env
+settings.json
 
 # Python junk files
 __pycache__/
@@ -20,3 +22,4 @@ Thumbs.db
 
 # Logs
 *.log
+logs/

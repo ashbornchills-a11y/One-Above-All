@@ -1,60 +1,107 @@
-# ⚡ One Above All - AI Screen Assistant
+<div align="center">
+  <h1>⚡ One Above All</h1>
+  <p><b>Your Omniscient AI Screen Assistant</b></p>
+  
+  <p>
+    <a href="https://github.com/ashbornchills-a11y/One-Above-All/stargazers"><img src="https://img.shields.io/github/stars/ashbornchills-a11y/One-Above-All?color=A6E3A1&style=for-the-badge" alt="Stars"></a>
+    <a href="https://github.com/ashbornchills-a11y/One-Above-All/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-89B4FA?style=for-the-badge" alt="License"></a>
+    <img src="https://img.shields.io/badge/Python-3.10+-F9E2AF?style=for-the-badge&logo=python&logoColor=black" alt="Python Version">
+    <img src="https://img.shields.io/badge/Status-Production_Ready-CBA6F7?style=for-the-badge" alt="Status">
+  </p>
 
-> Press a hotkey. Get AI answers. Any screen. Zero cost.
+  <p><i>Press a hotkey. Get intelligent answers about anything on your screen. Zero cost.</i></p>
+</div>
 
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+<br/>
 
-## 🎯 What It Does
+## 🎯 The Vision
 
-One Above All captures your screen, reads text via OCR, sends it to AI, and displays the answer in a minimal overlay - all triggered by one keyboard shortcut.
+**One Above All** bridges the gap between what you see and what you need to know. Whether you are coding, reading complex documents, or navigating UI elements, a single keyboard shortcut (`Shift + CapsLock + A`) summons a state-of-the-art AI model (Llama 3.3 70B) to analyze your screen and provide immediate, context-aware answers.
 
-## ✨ Features
+Designed with a sleek, non-intrusive UI and architected for performance, it runs silently in your system tray until you need it.
 
-- 🔍 Full Screen OCR - Reads any text visible on your monitor
-- 🤖 AI-Powered Answers - Uses Llama 3.3 70B via Groq (free API)
-- 🎨 Minimal Overlay - Subtle, non-intrusive display
-- ⌨️ Custom Hotkeys - Activate with Shift+CapsLock+A
-- 💰 100% Free - No paid APIs, no hidden costs
-- 🖥️ Works on Any Screen - Browsers, PDFs, apps, anywhere
+## ✨ Premium Features
 
-## 🛠️ Tech Stack
+- 🔍 **Omniscient Vision (OCR)**: High-performance, OpenCV-enhanced screen reading that captures text with extreme accuracy, even from images or videos.
+- 🧠 **Elite Intelligence**: Powered by **Llama 3.3 70B** via the blazing-fast Groq API, delivering answers faster than you can type the question.
+- 🎨 **Glassmorphism UI**: A beautifully crafted, draggable, dark-themed overlay built with `customtkinter`. It looks native and premium.
+- ⚡ **Zero Friction**: Runs in the background (system tray). No clunky terminal windows. One hotkey activation.
+- 💸 **100% Free Architecture**: Engineered to utilize the free tier of the Groq API, meaning zero running costs for enterprise-grade AI.
 
-| Component | Technology |
-|-----------|------------|
-| Language | Python 3.12 |
-| Screen Capture | MSS |
-| OCR Engine | Tesseract 5.5 |
-| AI Backend | Groq API (Llama 3.3 70B) |
-| GUI Framework | Tkinter |
-| Image Processing | OpenCV + NumPy |
+## 🏗️ Architecture
+
+The codebase has been meticulously structured for scalability and maintainability:
+
+```text
+src/
+├── core/
+│   ├── ai_backend.py      # LLM integration & prompt engineering
+│   ├── ocr_engine.py      # OpenCV preprocessing & Tesseract pipeline
+│   └── screen_capture.py  # High-speed MSS frame grabbing
+├── ui/
+│   ├── overlay_window.py  # CustomTkinter glassmorphism UI
+│   └── system_tray.py     # Background lifecycle management
+└── utils/
+    ├── config_manager.py  # .env & JSON settings state
+    └── logger.py          # Professional rotation logging
+```
 
 ## 🚀 Quick Setup
 
 ### Prerequisites
-- Python 3.10+
-- Tesseract OCR
+- **Python 3.10+**
+- **Tesseract OCR**: 
+  - Download from [UB-Mannheim/tesseract](https://github.com/UB-Mannheim/tesseract/wiki)
+  - *Note: Remember to note your installation path if it differs from the default.*
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/ashbornchills-a11y/One-Above-All.git
-cd One-Above-All
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ashbornchills-a11y/One-Above-All.git
+   cd One-Above-All
+   ```
 
-# Install dependencies
-pip install -r requirements.txt
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# Install Tesseract OCR
-# Download: https://github.com/UB-Mannheim/tesseract/wiki
-# IMPORTANT: Check "Add to PATH" during installation
+3. **Configure Environment:**
+   - Copy `.env.example` to `.env`.
+   - Get your free API key from [Groq Console](https://console.groq.com/keys).
+   - Add your key to the `.env` file:
+     ```env
+     GROQ_API_KEY=gsk_your_key_here
+     ```
 
-# Get free Groq API key
-# 1. Go to https://console.groq.com
-# 2. Sign up (free, no credit card)
-# 3. Create API key
-# 4. Copy config.example.py to config.py and paste your key
+4. **Launch:**
+   ```bash
+   python app.py
+   ```
+   *The application will minimize to your system tray automatically.*
 
-# Run it
-python main.py
+## ⚙️ Configuration
+
+You can customize the application behavior by modifying `settings.json` (created automatically on first run):
+
+```json
+{
+    "activation_hotkey": "shift+caps lock+a",
+    "close_hotkey": "shift+caps lock+q",
+    "tesseract_path": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "theme": "dark-blue",
+    "overlay_alpha": 0.95
+}
+```
+
+## 👨‍💻 Author
+
+Built by **Aditya**.
+- **Portfolio**: [portfolio-eu8d.vercel.app](https://portfolio-eu8d.vercel.app/)
+- **Specialization**: Full-Stack Development | AI Automation | Bot Engineering
+
+---
+<div align="center">
+  <i>If you find this project useful, consider giving it a ⭐</i>
+</div>

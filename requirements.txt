@@ -5,6 +5,6 @@ keyboard==0.13.5
 opencv-python==4.9.0.80
 numpy==1.26.3
 requests==2.31.0
-pyperclip==1.8.2
-customtkinter==5.2.1
-pystray==0.19.0
+customtkinter==5.2.2
+pystray==0.19.5
+python-dotenv==1.0.1
